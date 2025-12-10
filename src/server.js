@@ -10,7 +10,7 @@ import errorHandler from './middleware/errorHandler.js';
 
 // Load env vars FIRST
 dotenv.config({ path: '.env' });
-console.log('🔧 Environment loaded. PORT:', process.env.PORT, 'GOOGLE_CLIENT_ID exists:', !!process.env.GOOGLE_CLIENT_ID);
+// console.log('🔧 Environment loaded. PORT:', process.env.PORT, 'GOOGLE_CLIENT_ID exists:', !!process.env.GOOGLE_CLIENT_ID);
 
 // Import passport AFTER env vars are loaded
 // import passport from './config/passport.js';
