@@ -13,7 +13,7 @@ dotenv.config({ path: '.env' });
 console.log('🔧 Environment loaded. PORT:', process.env.PORT, 'GOOGLE_CLIENT_ID exists:', !!process.env.GOOGLE_CLIENT_ID);
 
 // Import passport AFTER env vars are loaded
-import passport from './config/passport.js';
+// import passport from './config/passport.js';
 
 // Import routes
 import authRoutes from './routes/authRoutes.js';
@@ -33,7 +33,7 @@ app.use(helmet());
 
 // CORS
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://192.168.31.130:8080'],
+  origin: ['http://localhost:8080', 'http://192.168.31.130:8080',"https://gb-computers-client.vercel.app"],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -52,8 +52,8 @@ app.use(session({
 }));
 
 // Passport middleware
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 // Logging
 if (process.env.NODE_ENV === 'development') {
